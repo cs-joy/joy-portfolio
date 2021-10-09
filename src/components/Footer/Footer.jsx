@@ -16,7 +16,7 @@ const Footer = () => {
 
 
         <div className={s.copyright}>
-          <h3>Copyright © {year} <b>SV.dev</b></h3>
+          <h3>Copyright © {year} <b>AJ.dev</b></h3>
         </div>
 
         <div className={s.body}>
