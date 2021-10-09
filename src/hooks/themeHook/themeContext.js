@@ -6,31 +6,31 @@ export const ThemeContext = createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [dark, setDark] = useState(true);
+  const [IsDark, setIsDark] = useState(true);
 
   const toggleTheme = () => {
 
-    localStorage.setItem('dark', JSON.stringify(!dark));
-    setDark(!dark);
+    localStorage.setItem('dark', JSON.stringify(!IsDark));
+    setIsDark(!IsDark);
 
-    document.body.classList.toggle('dark', !dark);
-    document.body.classList.toggle('light', dark);
+    document.body.classList.toggle('dark', !IsDark);
+    document.body.classList.toggle('light', IsDark);
   };
 
   useEffect(() => {
     const localeDark = JSON.parse(localStorage.getItem('dark'));
 
     if (typeof localeDark !== 'boolean')
-      document.body.classList.add(dark ? 'dark' : 'light');
+      document.body.classList.add(IsDark ? 'dark' : 'light');
     else {
-      setDark(localeDark);
+      setIsDark(localeDark);
       document.body.classList.add(localeDark ? 'dark' : 'light');
     }
   }, []);
 
   return (
     <>
-    <ThemeContext.Provider value={{ dark, toggleTheme }}>
+    <ThemeContext.Provider value={{ IsDark, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   </>
