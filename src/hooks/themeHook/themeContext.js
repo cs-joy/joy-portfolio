@@ -9,6 +9,7 @@ export const ThemeProvider = ({ children }) => {
   const [dark, setDark] = useState(true);
 
   const toggleTheme = () => {
+
     localStorage.setItem('dark', JSON.stringify(!dark));
     setDark(!dark);
 
@@ -28,8 +29,10 @@ export const ThemeProvider = ({ children }) => {
   }, []);
 
   return (
+    <>
     <ThemeContext.Provider value={{ dark, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
+  </>
   );
 };
