@@ -1,6 +1,6 @@
 {
   "name": "Portfolio React Application",
-  "short_name": "React-Portfolio",
+  "short_name": "Joy-Portfolio",
   "icons": [
     {
       "src": "/icons/48.png",
@@ -38,7 +38,7 @@
   "orientation": "portrait-primary",
   "background_color": "#000",
   "theme_color": "#181a27",
-  "description": "A simple Portfolio App, implementing a lot of PWA",
+  "description": "Joy Portfolio App, implementing a lot of PWA",
   "dir": "ltr",
   "lang": "en-US"
 }
